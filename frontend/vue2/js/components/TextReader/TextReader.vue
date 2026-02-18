@@ -593,6 +593,11 @@ export default {
                 .then(response => {
                     this.saving = false
                     this.finishError = false
+
+                    // Navigate straight to the next chapter if skipChapterCongratulations is enabled. Show congratulations if there is no next chapter.
+                    if (this.settings.skipChapterCongratulations && !this.finishError && this.nextChapter !== -1) {
+                        this.$router.push('/chapters/read/' + this.nextChapter)
+                    }
                 })
         },
         formatNumber: formatNumber,

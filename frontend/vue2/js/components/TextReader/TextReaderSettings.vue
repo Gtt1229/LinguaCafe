@@ -367,6 +367,39 @@
                             </v-col>
                         </v-row>
 
+                        <!-- Skip congratulations screen -->
+                        <v-row>
+                            <v-col
+                                cols="8"
+                                md="4"
+                                class="switch-container d-flex align-center mt-0 mb-md-5"
+                                >Skip congratulations screen:</v-col
+                            >
+                            <v-col
+                                cols="4"
+                                md="8"
+                                class="switch-container d-flex align-center mt-0 pt-3 justify-end"
+                            >
+                                <v-menu offset-y left nudge-top="-12px">
+                                    <template v-slot:activator="{ on, attrs }">
+                                        <v-icon class="mr-2" v-bind="attrs" v-on="on"
+                                            >mdi-help-circle-outline</v-icon
+                                        >
+                                    </template>
+                                    <v-card outlined class="rounded-lg pa-4" width="320px">
+                                        Automatically go to the next chapter after finishing,
+                                        skipping the congratulations screen.
+                                    </v-card>
+                                </v-menu>
+
+                                <v-switch
+                                    color="primary"
+                                    v-model="settings.skipChapterCongratulations"
+                                    @change="saveSettings"
+                                ></v-switch>
+                            </v-col>
+                        </v-row>
+
                         <!-- Show subtitle timestamps -->
                         <v-row>
                             <v-col

@@ -18,6 +18,7 @@ export const settingNames = {
     vocabularyHoverBoxPreferredPosition: 'vocabulary-hover-box-preferred-position',
     autoHighlightWords: 'auto-highlight-words',
     autoLevelUpWords: 'auto-level-up-words',
+    skipChapterCongratulations: 'skip-chapter-congratulations',
     showSubtitleTimestamps: 'show-subtitle-timestamps',
     spaceBetweenSubtitles: 'space-between-subtitles',
     mediaControlsVisible: 'media-controls-visible',
@@ -51,6 +52,7 @@ export const defaultSettings = {
     vocabularyHoverBoxPreferredPosition: 'bottom',
     autoHighlightWords: true,
     autoLevelUpWords: false,
+    skipChapterCongratulations: false,
     showSubtitleTimestamps: true,
     spaceBetweenSubtitles: 20,
 
